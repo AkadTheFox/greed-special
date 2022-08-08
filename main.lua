@@ -202,7 +202,7 @@ function mod:Init()
 	end
 
 	local planetarium = planetariumOverride or (rng:RandomFloat() < level:GetPlanetariumChance())
-	if planetarium then
+	if planetarium and not gplan then
 		mod:DoPlanetarium(level, stage)
 	end
 
